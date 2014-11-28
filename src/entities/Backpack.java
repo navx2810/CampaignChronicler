@@ -1,26 +1,29 @@
 package entities;
 
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map.Entry;
 
 public class Backpack 
 {
-	private ArrayList<Item> contents;
+	private HashMap<Item, Integer> contents;
 	
 	public Backpack() {
-		contents = new ArrayList<Item>();
+		contents = new HashMap<Item, Integer>();
 	}
 	
-	public void Add(Item item)
+	public void add(Item item, int amount)
 	{
-		contents.add(item);
+		contents.put(item, amount);
 	}
 	
-	public void Remove(Item item)
+	public void remove(Item item)
 	{
 		contents.remove(item);
 	}
 	
-	public ArrayList<Item> getContents() {
-		return contents;
+	public Iterator<Entry<Item, Integer>> getContents() 
+	{
+		return contents.entrySet().iterator();
 	}
 }

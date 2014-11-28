@@ -14,6 +14,14 @@ public class Player {
 		return backpack;
 	}
 	
+	public String getCharacterName() {
+		return character_name;
+	}
+	
+	public String getPlayerName() {
+		return player_name;
+	}
+	
 	@Override
 	public String toString() {
 		return character_name;

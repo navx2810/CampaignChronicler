@@ -19,6 +19,6 @@ public class Event {
 	
 	@Override
 	public String toString() {
-		return String.format("[%s] : %s", player, event);
+		return String.format("[%s]: %s", player, event);
 	}
 }
