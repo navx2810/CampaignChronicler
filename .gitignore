@@ -1,0 +1,8 @@
+# Eclipse Directories
+*/bin/*
+*/.settings/*
+.classpath
+.project
+
+# Java Objects
+*.class
