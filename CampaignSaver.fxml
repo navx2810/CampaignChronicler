@@ -50,7 +50,7 @@
       </GridPane>
    </top>
    <left>
-      <GridPane BorderPane.alignment="CENTER">
+      <GridPane styleClass="dark-text-area" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
@@ -58,9 +58,10 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="button-LightGray" text="Add Event" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="button-LightGray" text="View Players" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <font>
                   <Font name="Droid Sans" size="12.0" />
                </font></Button>
@@ -73,6 +74,18 @@
       </GridPane>
    </left>
    <center>
-      <ListView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <ListView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+         <bottom>
+            <AnchorPane prefHeight="30.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ChoiceBox layoutY="13.0" prefHeight="28.0" prefWidth="125.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="1.0" />
+                  <TextField layoutX="126.0" layoutY="1.0" prefHeight="28.0" prefWidth="364.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="126.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
+               </children>
+            </AnchorPane>
+         </bottom>
+      </BorderPane>
    </center>
 </BorderPane>
