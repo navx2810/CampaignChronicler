@@ -6,3 +6,6 @@
 
 # Java Objects
 *.class
+
+# Java FX files from Eclipse
+build.fxbuild
