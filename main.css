@@ -1,6 +1,11 @@
 .grey-bar
 {
-	-fx-background-color: gray;
+	-fx-background-color: rgb(100,100,100);
+}
+
+.darkGrey
+{
+	-fx-background-color: rgb(25,25,25);
 }
 
 .button-LightGray
@@ -41,5 +46,5 @@
 
 .dark-text-area
 {
-	-fx-background-color : rgb(40,40,40);
+	-fx-background-color : rgb(100,100,100);
 }
