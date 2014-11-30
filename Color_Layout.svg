@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="0.48.4 r9939"
+   version="1.1"
+   id="svg2"
+   height="400"
+   width="500"
+   sodipodi:docname="Color_Layout.svg">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="129.46371"
+     inkscape:cy="268.22889"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer7"
+     showgrid="false"
+     inkscape:window-width="1680"
+     inkscape:window-height="987"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1">
+    <sodipodi:guide
+       id="guide3020"
+       orientation="400.0,0"
+       position="0.0,0" />
+    <sodipodi:guide
+       id="guide3022"
+       orientation="400.0,0"
+       position="83.3333,0" />
+    <sodipodi:guide
+       id="guide3024"
+       orientation="400.0,0"
+       position="166.6667,0" />
+    <sodipodi:guide
+       id="guide3026"
+       orientation="400.0,0"
+       position="250.0,0" />
+    <sodipodi:guide
+       id="guide3028"
+       orientation="400.0,0"
+       position="333.3333,0" />
+    <sodipodi:guide
+       id="guide3030"
+       orientation="400.0,0"
+       position="416.6667,0" />
+    <sodipodi:guide
+       id="guide3032"
+       orientation="400.0,0"
+       position="500.0,0" />
+    <sodipodi:guide
+       id="guide3034"
+       orientation="0,500.0"
+       position="0,0.0" />
+    <sodipodi:guide
+       id="guide3036"
+       orientation="0,500.0"
+       position="0,66.6667" />
+    <sodipodi:guide
+       id="guide3038"
+       orientation="0,500.0"
+       position="0,133.3333" />
+    <sodipodi:guide
+       id="guide3040"
+       orientation="0,500.0"
+       position="0,200.0" />
+    <sodipodi:guide
+       id="guide3042"
+       orientation="0,500.0"
+       position="0,266.6667" />
+    <sodipodi:guide
+       id="guide3044"
+       orientation="0,500.0"
+       position="0,333.3333" />
+    <sodipodi:guide
+       id="guide3046"
+       orientation="0,500.0"
+       position="0,400.0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs4" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-652.36218)"
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="BG"
+     style="display:inline">
+    <rect
+       style="color:#000000;fill:#191919;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.60000002;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect3067"
+       width="500"
+       height="400"
+       x="0"
+       y="652.36218" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Header"
+     style="display:inline">
+    <rect
+       style="color:#000000;fill:#646464;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.60000002;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect3838"
+       width="500"
+       height="66.666702"
+       x="0"
+       y="0" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="ButtonLightGray">
+    <rect
+       style="color:#000000;fill:#505050;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.60000001999999997;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect3859"
+       width="83.333397"
+       height="66.666702"
+       x="333.33331"
+       y="0" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="ButtonDarkGray">
+    <rect
+       style="color:#000000;fill:#3c3c3c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.60000001999999997;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect3862"
+       width="83.333298"
+       height="66.666702"
+       x="416.66669"
+       y="0" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="ButtonBlue">
+    <rect
+       style="color:#000000;fill:#1d69a9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.60000001999999997;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect3865"
+       width="83.333298"
+       height="66.666702"
+       x="250"
+       y="0" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer6"
+     inkscape:label="ButtonRed">
+    <rect
+       style="color:#000000;fill:#932419;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.60000001999999997;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect3868"
+       width="83.333298"
+       height="66.666702"
+       x="166.6667"
+       y="0" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer7"
+     inkscape:label="ButtonGreen">
+    <rect
+       style="color:#000000;fill:#23ab2d;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.60000001999999997;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect3776"
+       width="83.333397"
+       height="66.666702"
+       x="83.333298"
+       y="0" />
+  </g>
+</svg>
