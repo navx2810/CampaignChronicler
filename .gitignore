@@ -1,5 +1,6 @@
 # Eclipse Directories
 */bin/*
+bin/*
 .settings/*
 .classpath
 .project
