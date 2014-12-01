@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 public class Player implements Serializable
 {
+	private static final long serialVersionUID = 1757142403627798478L;
 	private String character_name, player_name;
 	private Backpack backpack;
 	

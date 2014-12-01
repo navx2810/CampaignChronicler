@@ -70,7 +70,6 @@ public class CampaignSaverController extends AbstractViewController {
 			campaignModel = temp;
 			loadLists();
 		}
-			
 	}
 	
 	private void loadLists() 
