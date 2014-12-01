@@ -1,6 +1,5 @@
 # Eclipse Directories
 */bin/*
-bin/*
 .settings/*
 .classpath
 .project
@@ -10,3 +9,4 @@ bin/*
 
 # Java FX files from Eclipse
 build.fxbuild
+/bin/
