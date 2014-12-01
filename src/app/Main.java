@@ -2,6 +2,7 @@ package app;
 	
 import java.io.IOException;
 
+
 import app.controllers.CampaignSaverController;
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -22,7 +23,7 @@ public class Main extends Application {
 		loadPanes();
 		
 		Scene scene = new Scene(rootPane);
-		scene.getStylesheets().add(getClass().getResource("main.css").toExternalForm());
+		scene.getStylesheets().add(Main.class.getResource("main.css").toExternalForm());
 		
 		primaryStage.setScene(scene);
 		primaryStage.show();
