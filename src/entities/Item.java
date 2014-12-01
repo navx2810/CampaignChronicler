@@ -15,8 +15,14 @@ public class Item implements Serializable
 		this(name, 1);
 	}
 	
+	public void setName(String name) 
+	{
+		this.name = name;
+	}
+	
 	@Override
-	public String toString() {
+	public String toString() 
+	{
 		return name;
 	}
 }
