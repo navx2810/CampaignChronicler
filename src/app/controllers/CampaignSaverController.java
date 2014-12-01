@@ -73,8 +73,8 @@ public class CampaignSaverController extends AbstractViewController {
 		eventList.clear();
 		itemList.clear();
 		
-		playerList.addAll(campaignModel.getPlayerModel().getPlayers());
-		eventList.addAll(campaignModel.getEventLogModel().getEvents());
+		playerList.addAll(campaignModel.getPlayerModel().getArrayList());
+		eventList.addAll(campaignModel.getEventLogModel().getArrayList());
 	}
 
 	
