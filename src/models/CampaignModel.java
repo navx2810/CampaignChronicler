@@ -9,11 +9,13 @@ public class CampaignModel implements Serializable
 	
 	private EventLogModel eventLogModel;
 	private PlayerModel playerModel;
+	private ItemModel itemModel;
 	
 	public CampaignModel() 
 	{
 		eventLogModel = new EventLogModel();
 		playerModel = new PlayerModel();
+		itemModel = new ItemModel();
 	}
 	
 	public EventLogModel getEventLogModel() 
@@ -24,5 +26,10 @@ public class CampaignModel implements Serializable
 	public PlayerModel getPlayerModel() 
 	{
 		return playerModel;
+	}
+	
+	public ItemModel getItemModel() 
+	{
+		return itemModel;
 	}
 }
