@@ -104,18 +104,16 @@
 	-fx-background-radius: 0;	
 }
 
-.choice-box, .choice-box .open-button 
+.choice-box
 {
 	-fx-background-radius: 0;
 	-fx-background-color:rgb(60,60,60);
-	-fx-text-fill: rgb(255,255,255);
 }
 
 .choice-box:hover
 {
 	-fx-background-radius: 0;
 	-fx-background-color: derive( rgb(60,60,60), 20%);
-	-fx-text-fill: rgb(255,255,255);
 }
 
 .text-field 
