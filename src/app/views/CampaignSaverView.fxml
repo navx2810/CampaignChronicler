@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.geometry.*?>
@@ -7,9 +8,9 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.CampaignSaverController">
    <top>
-      <GridPane styleClass="grey-bar" BorderPane.alignment="CENTER">
+      <GridPane styleClass="grey-bg" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -50,7 +51,7 @@
       </GridPane>
    </top>
    <left>
-      <GridPane styleClass="dark-text-area" BorderPane.alignment="CENTER">
+      <GridPane prefWidth="110.0" styleClass="grey-bg" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
@@ -61,15 +62,15 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="button-LightGray" text="View Players" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="button-LightGray" text="Manage Events" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <font>
                   <Font name="Droid Sans" size="12.0" />
                </font></Button>
-            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="button-DarkGray" text="Add Item" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="button-DarkGray" text="Manage Items" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <font>
                   <Font name="Droid Sans" size="12.0" />
                </font></Button>
-            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="button-LightGray" text="Add Player" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="button-LightGray" text="Manager Players" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
          </children>
       </GridPane>
    </left>
@@ -79,12 +80,15 @@
             <ListView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
          </center>
          <bottom>
-            <AnchorPane prefHeight="30.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <HBox prefHeight="1.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <ChoiceBox layoutY="13.0" prefHeight="28.0" prefWidth="125.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="1.0" />
-                  <TextField layoutX="126.0" layoutY="1.0" prefHeight="28.0" prefWidth="364.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="126.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
+                  <ChoiceBox maxHeight="1.7976931348623157E308" />
+                  <TextField maxWidth="1.7976931348623157E308" promptText="Enter your dialogue or event info here" HBox.hgrow="ALWAYS" />
                </children>
-            </AnchorPane>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </HBox>
          </bottom>
       </BorderPane>
    </center>

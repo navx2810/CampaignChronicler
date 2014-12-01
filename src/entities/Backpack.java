@@ -1,10 +1,11 @@
 package entities;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map.Entry;
 
-public class Backpack 
+public class Backpack implements Serializable
 {
 	private HashMap<Item, Integer> contents;
 	

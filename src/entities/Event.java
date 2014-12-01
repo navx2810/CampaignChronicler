@@ -1,6 +1,9 @@
 package entities;
 
-public class Event {
+import java.io.Serializable;
+
+public class Event implements Serializable 
+{
 	private String event;
 	private Player player;
 	

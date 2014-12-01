@@ -1,6 +1,9 @@
 package entities;
 
-public class Player {
+import java.io.Serializable;
+
+public class Player implements Serializable
+{
 	private String character_name, player_name;
 	private Backpack backpack;
 	
