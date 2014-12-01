@@ -53,7 +53,13 @@ public class CampaignSaverController extends AbstractViewController {
 	private void viewPlayers() {}
 	
 	@FXML
-	private void save() {}
+	private void save() 
+	{
+		if ( FileHelper.saveCampaign(campaignModel) )
+			System.out.println("Save Complete");
+		else
+			System.out.println("Save Failed");
+	}
 	
 	@FXML
 	private void load() 
@@ -80,5 +86,8 @@ public class CampaignSaverController extends AbstractViewController {
 	
 
 	@FXML
-	private void addEntry() { System.out.println("I got here"); }
+	private void addEntry()
+	{ 
+		eventList.add( new Event( eventText.getText(), playersChoiceBox.getValue() ) ); 
+	}
 }
