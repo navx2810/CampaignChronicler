@@ -37,34 +37,21 @@ public class CampaignSaverController extends AbstractViewController {
 		campaignModel = new CampaignModel();
 	}
 	
-	@FXML
-	private void initialize()
-	{
-		loadLists();
-	}
-	
-	@FXML
-	private void addPlayer() {}
-	
-	@FXML
-	private void addItem() {}
-	
-	@FXML
-	private void addEntry()
+	public void addPlayer() {}
+	public void addItem() {}
+	public void addEntry()
 	{ 
-		eventList.add( new Event( eventText.getText(), playersChoiceBox.getValue() ) ); 
+		if ( !eventText.getText().isEmpty() )
+			eventList.add( new Event( eventText.getText(), playersChoiceBox.getValue() ) ); 
+		eventText.clear();
 	}
 
-	
 	@FXML
 	private void managePlayers() {}
-	
 	@FXML
 	private void manageItems() {}
-	
 	@FXML
 	private void manageEvents() {}
-	
 	@FXML
 	private void save() 
 	{
@@ -72,6 +59,14 @@ public class CampaignSaverController extends AbstractViewController {
 			System.out.println("Save Complete");
 		else
 			System.out.println("Save Failed");
+	}
+	@FXML
+	private void initialize()
+	{
+		loadLists();
+		
+		eventListView.setItems(eventList);
+		playersChoiceBox.setItems(playerList);
 	}
 	
 	@FXML
@@ -94,6 +89,8 @@ public class CampaignSaverController extends AbstractViewController {
 		playerList.addAll(campaignModel.getPlayerModel().getArrayList());
 		eventList.addAll(campaignModel.getEventLogModel().getArrayList());
 		itemList.addAll(campaignModel.getItemModel().getArrayList());
+		
+		playerList.add(new Player("TemporaryGreg", "Greg"));
 	}
 
 
