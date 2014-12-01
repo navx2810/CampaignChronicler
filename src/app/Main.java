@@ -34,7 +34,7 @@ public class Main extends Application {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("views/RootPaneView.fxml"));
 		rootPane = (GridPane) loader.load();
 		
-		loader = new FXMLLoader(getClass().getResource("views/CampaignSaverView.fxml"));
+		loader = new FXMLLoader(getClass().getResource("controllers/CampaignSaverView.fxml"));
 		campaignPane = (BorderPane) loader.load();
 		CampaignSaverController saverController = loader.getController();
 		saverController.setRootPane(rootPane);

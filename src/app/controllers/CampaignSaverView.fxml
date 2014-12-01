@@ -77,13 +77,13 @@
    <center>
       <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <center>
-            <ListView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+            <ListView fx:id="eventListView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
          </center>
          <bottom>
             <HBox prefHeight="1.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <ChoiceBox maxHeight="1.7976931348623157E308" />
-                  <TextField maxWidth="1.7976931348623157E308" promptText="Enter your dialogue or event info here" HBox.hgrow="ALWAYS" />
+                  <ChoiceBox fx:id="playersChoiceBox" maxHeight="1.7976931348623157E308" />
+                  <TextField fx:id="eventText" maxWidth="1.7976931348623157E308" onAction="#addEntry" promptText="Enter your dialogue or event info here" HBox.hgrow="ALWAYS" />
                </children>
                <BorderPane.margin>
                   <Insets />

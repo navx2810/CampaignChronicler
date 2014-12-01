@@ -4,6 +4,9 @@ import java.io.Serializable;
 
 public class CampaignModel implements Serializable 
 {
+	
+	private static final long serialVersionUID = -8146492908907912044L;
+	
 	private EventLogModel eventLogModel;
 	private PlayerModel playerModel;
 	

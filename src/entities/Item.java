@@ -13,10 +13,6 @@ public class Item implements Serializable
 	public Item(String name) {
 		this(name, 1);
 	}
-
-	public String getName() {
-		return name;
-	}
 	
 	@Override
 	public String toString() {

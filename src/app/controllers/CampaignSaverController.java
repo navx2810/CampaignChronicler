@@ -1,35 +1,46 @@
 package app.controllers;
 
-import java.util.ArrayList;
-
-import entities.Player;
+import utils.FileHelper;
+import models.CampaignModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import abstracts.AbstractViewController;
+import entities.Event;
+import entities.Item;
+import entities.Player;
 
 public class CampaignSaverController extends AbstractViewController {
 	
 	@FXML
-	private ChoiceBox<Player> players;
+	private ChoiceBox<Player> playersChoiceBox;
 	@FXML
 	private TextField eventText;
+	@FXML
+	private ListView<Event> eventListView;
 	
-	private ArrayList<Player> playersList;
-	private ObservableList<Player> items;
+	private CampaignModel campaignModel;
 	
-	public CampaignSaverController() {
-		playersList = new ArrayList<Player>();
-		items = FXCollections.observableArrayList(playersList);
+	private ObservableList<Player> playerList;
+	private ObservableList<Event> eventList;
+	private ObservableList<Item> itemList;
+	
+	public CampaignSaverController() 
+	{
+		playerList = FXCollections.observableArrayList();
+		eventList = FXCollections.observableArrayList();
+		itemList = FXCollections.observableArrayList();
 		
+		campaignModel = new CampaignModel();
 	}
 	
 	@FXML
 	private void initialize()
 	{
-		players.setItems(items);
+		loadLists();
 	}
 	
 	@FXML
@@ -45,8 +56,29 @@ public class CampaignSaverController extends AbstractViewController {
 	private void save() {}
 	
 	@FXML
-	private void load() {}
+	private void load() 
+	{
+		CampaignModel temp = FileHelper.loadCampaign();
+		if ( temp != null )
+		{
+			campaignModel = temp;
+			loadLists();
+		}
+			
+	}
 	
+	private void loadLists() 
+	{
+		playerList.clear();
+		eventList.clear();
+		itemList.clear();
+		
+		playerList.addAll(campaignModel.getPlayerModel().getPlayers());
+		eventList.addAll(campaignModel.getEventLogModel().getEvents());
+	}
+
+	
+
 	@FXML
-	private void addEntry() {}
+	private void addEntry() { System.out.println("I got here"); }
 }
