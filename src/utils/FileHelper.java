@@ -16,7 +16,7 @@ public final class FileHelper
 {
 	private static final String FILE_EXTENSION = "cdm";
 	
-	public static void saveCampaign(CampaignModel model)
+	public static boolean saveCampaign(CampaignModel model)
 	{
 		JFileChooser chooser = new JFileChooser();
 		chooser.setFileFilter(new FileNameExtensionFilter("Campaign Data File (.cdm)", FILE_EXTENSION));
@@ -33,10 +33,12 @@ public final class FileHelper
 				out.close();
 				fileOut.close();
 				
-				System.out.println("Done Saving");			// Change this to a real logger eventually
+				return true;
 				
 			}	catch(Exception e) { e.printStackTrace(); }
 		}
+		
+		return false;
 	}
 	
 	public static CampaignModel loadCampaign()
