@@ -1,10 +1,13 @@
 package models;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Iterator;
 
+import javafx.collections.ObservableList;
 import entities.Player;
 
-public class PlayerModel 
+public class PlayerModel implements Serializable 
 {
 	private ArrayList<Player> players;
 	
@@ -18,9 +21,11 @@ public class PlayerModel
 		players.add(player);
 	}
 	
-	public Player getPlayer(Player player)
+	public void setPlayers(ObservableList<Player> list) 
 	{
-		int index = players.indexOf(player);
-		return players.get(index);
+		players.clear();
+		Iterator<Player> it = list.iterator();
+		while(it.hasNext())
+			players.add(it.next());
 	}
 }
