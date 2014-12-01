@@ -1,31 +1,13 @@
 package models;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Iterator;
 
-import javafx.collections.ObservableList;
+import abstracts.AbstractModel;
 import entities.Player;
 
-public class PlayerModel implements Serializable 
+public class PlayerModel extends AbstractModel<Player> implements Serializable 
 {
-	private ArrayList<Player> players;
+
+	private static final long serialVersionUID = 1088977228703864112L;
 	
-	public PlayerModel() 
-	{
-		players = new ArrayList<Player>();
-	}
-	
-	public void addPlayer(Player player)
-	{
-		players.add(player);
-	}
-	
-	public void setPlayers(ObservableList<Player> list) 
-	{
-		players.clear();
-		Iterator<Player> it = list.iterator();
-		while(it.hasNext())
-			players.add(it.next());
-	}
 }
