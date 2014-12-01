@@ -50,7 +50,20 @@ public class CampaignSaverController extends AbstractViewController {
 	private void addItem() {}
 	
 	@FXML
-	private void viewPlayers() {}
+	private void addEntry()
+	{ 
+		eventList.add( new Event( eventText.getText(), playersChoiceBox.getValue() ) ); 
+	}
+
+	
+	@FXML
+	private void managePlayers() {}
+	
+	@FXML
+	private void manageItems() {}
+	
+	@FXML
+	private void manageEvents() {}
 	
 	@FXML
 	private void save() 
@@ -83,11 +96,5 @@ public class CampaignSaverController extends AbstractViewController {
 		itemList.addAll(campaignModel.getItemModel().getArrayList());
 	}
 
-	
 
-	@FXML
-	private void addEntry()
-	{ 
-		eventList.add( new Event( eventText.getText(), playersChoiceBox.getValue() ) ); 
-	}
 }
