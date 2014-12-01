@@ -2,7 +2,6 @@ package app;
 	
 import java.io.IOException;
 
-
 import app.controllers.CampaignSaverController;
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -18,8 +17,8 @@ public class Main extends Application {
 	private BorderPane campaignPane;
 	
 	@Override
-	public void start(Stage primaryStage) throws IOException {
-		
+	public void start(Stage primaryStage) throws IOException 
+	{
 		loadPanes();
 		
 		Scene scene = new Scene(rootPane);
@@ -27,7 +26,6 @@ public class Main extends Application {
 		
 		primaryStage.setScene(scene);
 		primaryStage.show();
-		
 	}
 	
 	public void loadPanes() throws IOException

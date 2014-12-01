@@ -8,7 +8,8 @@ public class Event implements Serializable
 	private String event;
 	private Player player;
 	
-	public Event(String event, Player player) {
+	public Event(String event, Player player) 
+	{
 		this.event = event;
 		this.player = player;
 	}

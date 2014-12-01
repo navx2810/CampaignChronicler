@@ -10,7 +10,8 @@ public class Backpack implements Serializable
 	private static final long serialVersionUID = -2852107685418967302L;
 	private HashMap<Item, Integer> contents;
 	
-	public Backpack() {
+	public Backpack() 
+	{
 		contents = new HashMap<Item, Integer>();
 	}
 	
