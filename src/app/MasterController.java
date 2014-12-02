@@ -88,8 +88,6 @@ public class MasterController {
 		playerList.addAll(campaignModel.getPlayerModel().getArrayList());
 		eventList.addAll(campaignModel.getEventLogModel().getArrayList());
 		itemList.addAll(campaignModel.getItemModel().getArrayList());
-		
-		playerList.add(new Player("TemporaryGreg", "Greg"));
 	}
 
 }
