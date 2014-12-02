@@ -108,11 +108,17 @@
 {
 	-fx-background-radius: 0;
 	-fx-background-color:rgb(60,60,60);
+
+}
+
+.context-menu
+{
+	-fx-background-color:rgb(60,60,60);
 }
 
 .choice-box .label
 {
-	-fx-text-fill: rgb(220,220,220);
+	-fx-text-fill: rgb(235,235,235);
 }
 
 .choice-box:hover
