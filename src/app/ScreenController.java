@@ -51,7 +51,7 @@ public class ScreenController {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("controllers/CampaignView.fxml"));
 			campaignView = (BorderPane) loader.load();
 			CampaignController campaignController = loader.getController();
-			campaignController.setMasterController(masterController);
+			campaignController.setScreenController(this);
 			campaignController.init();
 			
 			switchToCampaignView();
