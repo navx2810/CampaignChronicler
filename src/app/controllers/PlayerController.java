@@ -25,7 +25,11 @@ public class PlayerController extends AbstractViewController{
 	private void addPlayer()
 	{
 		if ( !playerName.getText().isEmpty() && !characterName.getText().isEmpty() )
+		{
 			screenController.masterController.add(new Player(characterName.getText(), playerName.getText()));
+			playerName.clear();
+			characterName.clear();
+		}
 	}
 	
 	@FXML 
