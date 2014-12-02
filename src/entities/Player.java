@@ -1,21 +1,22 @@
 package entities;
 
 import java.io.Serializable;
+import java.util.HashMap;
 
 public class Player implements Serializable
 {
 	private static final long serialVersionUID = 1757142403627798478L;
 	private String character_name, player_name;
-	private Backpack backpack;
+	private HashMap<Item, Integer> backpack;
 	
 	public Player(String character_name, String player_name) 
 	{
 		this.character_name = character_name;
 		this.player_name = player_name;
-		backpack = new Backpack();
+		backpack = new HashMap<Item, Integer>();
 	}
 	
-	public Backpack getBackpack() 
+	public HashMap<Item, Integer> getBackpack() 
 	{
 		return backpack;
 	}
