@@ -60,16 +60,19 @@ public class ScreenController {
 			loader = new FXMLLoader(getClass().getResource("controllers/EventView.fxml"));
 			eventView = (BorderPane) loader.load();
 			EventController eventController = loader.getController();
+			eventController.setScreenController(this);
 			eventController.init();
 			
 			loader = new FXMLLoader(getClass().getResource("controllers/ItemView.fxml"));
 			itemView = (BorderPane) loader.load();
 			ItemController itemController = loader.getController();
+			itemController.setScreenController(this);
 			itemController.init();
 			
-			loader = new FXMLLoader(getClass().getResource("controllers/ItemView.fxml"));
+			loader = new FXMLLoader(getClass().getResource("controllers/PlayerView.fxml"));
 			playerView = (BorderPane) loader.load();
 			PlayerController playerController = loader.getController();
+			playerController.setScreenController(this);
 			playerController.init();
 			
 			

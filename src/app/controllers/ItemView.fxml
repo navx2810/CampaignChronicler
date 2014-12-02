@@ -26,7 +26,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#load" styleClass="button-Blue" text="Return" textFill="WHITE" />
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="button-Blue" text="Return" textFill="WHITE" />
                </children>
                <GridPane.margin>
                   <Insets />
@@ -83,7 +83,7 @@
                               <Button maxHeight="100.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" styleClass="button-Green" text="Add Item To Player" BorderPane.alignment="CENTER" />
                            </bottom>
                            <center>
-                              <ListView fx:id="playerListView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                              <ListView fx:id="playerListViewForAdd" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
                            </center>
                         </BorderPane>
                      </children>

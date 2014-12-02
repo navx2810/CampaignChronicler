@@ -21,7 +21,9 @@ public class ItemController extends AbstractViewController {
 	@FXML
 	private ListView<Item> itemListView;
 	@FXML
-	private ListView<Player> playerListViewForAdd, playerListViewForDelete;
+	private ListView<Player> playerListViewForAdd;
+	@FXML
+	private ListView<Player> playerListViewForDelete;
 	@FXML 
 	private ListView<Item> playerItemListView;
 	
