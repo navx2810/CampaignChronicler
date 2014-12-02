@@ -1,6 +1,9 @@
 package app;
 
 import app.controllers.CampaignController;
+import app.controllers.EventController;
+import app.controllers.ItemController;
+import app.controllers.PlayerController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
@@ -53,6 +56,22 @@ public class ScreenController {
 			CampaignController campaignController = loader.getController();
 			campaignController.setScreenController(this);
 			campaignController.init();
+			
+			loader = new FXMLLoader(getClass().getResource("controllers/EventView.fxml"));
+			eventView = (BorderPane) loader.load();
+			EventController eventController = loader.getController();
+			eventController.init();
+			
+			loader = new FXMLLoader(getClass().getResource("controllers/ItemView.fxml"));
+			itemView = (BorderPane) loader.load();
+			ItemController itemController = loader.getController();
+			itemController.init();
+			
+			loader = new FXMLLoader(getClass().getResource("controllers/ItemView.fxml"));
+			playerView = (BorderPane) loader.load();
+			PlayerController playerController = loader.getController();
+			playerController.init();
+			
 			
 			switchToCampaignView();
 		} catch(Exception e) { e.printStackTrace(); }
