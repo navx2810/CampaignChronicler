@@ -21,14 +21,15 @@ public class ItemController extends AbstractViewController {
 	@FXML
 	private ListView<Item> itemListView;
 	@FXML
-	private ListView<Player> playerListView;
+	private ListView<Player> playerListViewForAdd, playerListViewForDelete;
 	@FXML 
 	private ListView<Item> playerItemListView;
 	
 	@Override
 	public void init() {
 		itemListView.setItems(screenController.masterController.itemList);
-		playerListView.setItems(screenController.masterController.playerList);
+		playerListViewForAdd.setItems(screenController.masterController.playerList);
+		playerListViewForDelete.setItems(screenController.masterController.playerList);
 		playerItemListView.setItems(playerItems);
 		playerItems.clear();
 	}
@@ -36,6 +37,7 @@ public class ItemController extends AbstractViewController {
 	@FXML
 	private void addItem()
 	{
+		screenController.masterController.add(itemListView.getSelectionModel().getSelectedItem());
 	}
 	
 	@FXML
@@ -47,20 +49,32 @@ public class ItemController extends AbstractViewController {
 	@FXML
 	private void addItemToPlayer()
 	{
+		Player selectedPlayer = playerListViewForAdd.getSelectionModel().getSelectedItem();
+		Item selectedItem = itemListView.getSelectionModel().getSelectedItem();
 		
+		if ( selectedItem != null || selectedPlayer != null )
+			if ( selectedPlayer.getBackpack().containsKey(selectedItem) )
+				selectedPlayer.getBackpack().put(selectedItem, selectedPlayer.getBackpack().get(selectedItem) + 1);
+			else
+				selectedPlayer.getBackpack().put(selectedItem, 1);
 	}
 	
 	@FXML
 	private void removeItemFromPlayer()
 	{
+		Player selectedPlayer = playerListViewForDelete.getSelectionModel().getSelectedItem();
+		Item selectedItem = itemListView.getSelectionModel().getSelectedItem();
 		
+		if ( selectedItem != null || selectedPlayer != null )
+			if ( selectedPlayer.getBackpack().containsKey(selectedItem) )
+				selectedPlayer.getBackpack().remove(selectedItem);
 	}
 	
 	@FXML
 	private void updatePlayersItems()
 	{
 		playerItems.clear();
-		Iterator<Entry<Item, Integer>> contents = playerListView.getSelectionModel().getSelectedItem().getBackpack().entrySet().iterator();
+		Iterator<Entry<Item, Integer>> contents = playerListViewForDelete.getSelectionModel().getSelectedItem().getBackpack().entrySet().iterator();
 		while ( contents.hasNext() )
 			playerItems.add(contents.next().getKey());
 	}

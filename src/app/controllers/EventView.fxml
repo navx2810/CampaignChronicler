@@ -8,7 +8,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="dark-gray-bg" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.CampaignController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="dark-gray-bg" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.EventController">
    <top>
       <GridPane styleClass="grey-bg" BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -53,8 +53,8 @@
             <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
          </BorderPane.margin>
          <children>
-            <Button maxHeight="100.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" styleClass="button-Red" text="Delete Event" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowSpan="2" />
+            <Button maxHeight="100.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#removeEvent" prefHeight="50.0" styleClass="button-Red" text="Delete Event" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ListView fx:id="eventListView" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowSpan="2" />
          </children>
       </GridPane>
    </center>

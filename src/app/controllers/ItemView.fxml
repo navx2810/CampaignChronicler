@@ -8,7 +8,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="dark-gray-bg" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.CampaignController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="dark-gray-bg" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.ItemController">
    <top>
       <GridPane styleClass="grey-bg" BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -55,7 +55,7 @@
                      <children>
                         <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(255, 255, 255, .2);">
                            <center>
-                              <TextField alignment="CENTER" promptText="Item Name" BorderPane.alignment="CENTER" />
+                              <TextField fx:id="itemName" alignment="CENTER" promptText="Item Name" BorderPane.alignment="CENTER" />
                            </center>
                            <bottom>
                               <Button maxHeight="100.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" styleClass="button-Green" text="Add Item" BorderPane.alignment="CENTER" />
@@ -69,7 +69,7 @@
                               <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
                            </GridPane.margin>
                            <center>
-                              <ListView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                              <ListView fx:id="itemListView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
                            </center>
                            <bottom>
                               <Button maxHeight="100.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" styleClass="button-Red" text="Remove Item" BorderPane.alignment="CENTER" />
@@ -83,7 +83,7 @@
                               <Button maxHeight="100.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" styleClass="button-Green" text="Add Item To Player" BorderPane.alignment="CENTER" />
                            </bottom>
                            <center>
-                              <ListView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                              <ListView fx:id="playerListView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
                            </center>
                         </BorderPane>
                      </children>
@@ -101,7 +101,7 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <ListView prefHeight="200.0" prefWidth="200.0">
+                        <ListView fx:id="playerListViewForDelete" onMouseClicked="#updatePlayersItems" prefHeight="200.0" prefWidth="200.0">
                            <GridPane.margin>
                               <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
                            </GridPane.margin>
@@ -111,7 +111,7 @@
                               <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
                            </GridPane.margin>
                            <center>
-                              <ListView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                              <ListView fx:id="playerItemListView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
                            </center>
                            <bottom>
                               <Button maxHeight="100.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" styleClass="button-Red" text="Delete" BorderPane.alignment="CENTER" />

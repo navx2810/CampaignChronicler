@@ -8,7 +8,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="dark-gray-bg" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.CampaignController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="dark-gray-bg" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.PlayerController">
    <top>
       <GridPane styleClass="grey-bg" BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -69,8 +69,8 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <TextField alignment="CENTER" maxWidth="520.0" promptText="Player's Name" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                        <TextField alignment="CENTER" maxWidth="520.0" promptText="Character's Name" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <TextField fx:id="playerName" alignment="CENTER" maxWidth="520.0" promptText="Player's Name" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <TextField fx:id="characterName" alignment="CENTER" maxWidth="520.0" promptText="Character's Name" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                      </children>
                      <GridPane.margin>
                         <Insets left="10.0" right="10.0" />
@@ -84,7 +84,7 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Button maxHeight="50.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#load" styleClass="button-Green" text="Add Player" textFill="WHITE" GridPane.valignment="BOTTOM" />
+                        <Button maxHeight="50.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#addPlayer" styleClass="button-Green" text="Add Player" textFill="WHITE" GridPane.valignment="BOTTOM" />
                      </children>
                      <GridPane.margin>
                         <Insets top="50.0" />
@@ -94,8 +94,8 @@
             </GridPane>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                <children>
-                  <ListView layoutX="50.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                  <Button layoutY="270.0" maxHeight="50.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="250.0" styleClass="button-Red" text="Delete Selecter Player" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <ListView fx:id="playerListView" layoutX="50.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <Button layoutY="270.0" maxHeight="50.0" mnemonicParsing="false" onAction="#deletePlayer" prefHeight="50.0" prefWidth="250.0" styleClass="button-Red" text="Delete Selecter Player" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
                </children>
                <GridPane.margin>
                   <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
