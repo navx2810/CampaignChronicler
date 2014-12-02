@@ -18,10 +18,15 @@ public class EventController extends AbstractViewController
 			screenController.masterController.eventList.remove(toRemove);
 	}
 
-	
 	@Override
 	public void init() 
 	{
 		eventListView.setItems(screenController.masterController.eventList);
+	}
+	
+	@FXML
+	private void returnTo()
+	{
+		screenController.switchToCampaignView();
 	}
 }

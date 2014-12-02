@@ -36,11 +36,11 @@ public class CampaignController {
 	}
 
 	@FXML
-	private void managePlayers() {}
+	private void managePlayers() { screenController.switchToPlayerView(); }
 	@FXML
-	private void manageItems() {}
+	private void manageItems() { screenController.switchToItemView(); }
 	@FXML
-	private void manageEvents() {}
+	private void manageEvents() { screenController.switchToEventView(); }
 	@FXML
 	private void save() 
 	{

@@ -39,7 +39,8 @@ public class ItemController extends AbstractViewController {
 	@FXML
 	private void addItem()
 	{
-		screenController.masterController.add(itemListView.getSelectionModel().getSelectedItem());
+		if ( !itemName.getText().isEmpty() )
+			screenController.masterController.add(new Item( itemName.getText() ));
 	}
 	
 	@FXML
@@ -81,4 +82,9 @@ public class ItemController extends AbstractViewController {
 			playerItems.add(contents.next().getKey());
 	}
 	
+	@FXML
+	private void returnTo()
+	{
+		screenController.switchToCampaignView();
+	}
 }

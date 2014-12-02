@@ -36,4 +36,9 @@ public class PlayerController extends AbstractViewController{
 			screenController.masterController.removePlayerFromCampaign(toDelete);
 	}
 
+	@FXML
+	private void returnTo()
+	{
+		screenController.switchToCampaignView();
+	}
 }

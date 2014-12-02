@@ -26,7 +26,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="button-Blue" text="Return" textFill="WHITE" />
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#returnTo" styleClass="button-Blue" text="Return" textFill="WHITE" />
                </children>
                <GridPane.margin>
                   <Insets />
@@ -58,7 +58,7 @@
                               <TextField fx:id="itemName" alignment="CENTER" promptText="Item Name" BorderPane.alignment="CENTER" />
                            </center>
                            <bottom>
-                              <Button maxHeight="100.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" styleClass="button-Green" text="Add Item" BorderPane.alignment="CENTER" />
+                              <Button maxHeight="100.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#addItem" prefHeight="50.0" styleClass="button-Green" text="Add Item" BorderPane.alignment="CENTER" />
                            </bottom>
                            <GridPane.margin>
                               <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
