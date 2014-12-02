@@ -32,4 +32,5 @@ public class CampaignModel implements Serializable
 	{
 		return itemModel;
 	}
+	
 }

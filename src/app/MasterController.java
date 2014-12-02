@@ -59,6 +59,10 @@ public class MasterController {
 	
 	public void save() 
 	{
+		campaignModel.getPlayerModel().setArrayList(playerList);
+		campaignModel.getEventLogModel().setArrayList(eventList);
+		campaignModel.getItemModel().setArrayList(itemList);
+		
 		if ( FileHelper.saveCampaign(campaignModel) )
 			System.out.println("Save Complete");
 		else

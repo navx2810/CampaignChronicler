@@ -1,7 +1,6 @@
 package abstracts;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 import javafx.collections.ObservableList;
 
@@ -22,8 +21,6 @@ public abstract class AbstractModel<T>
 	public void setArrayList(ObservableList<T> observableList) 
 	{
 		arrayList.clear();
-		Iterator<T> iterator = observableList.iterator();
-		while( iterator.hasNext() )
-			arrayList.add( iterator.next() );
+		arrayList.addAll(observableList);
 	}
 }
