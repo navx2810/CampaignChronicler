@@ -51,6 +51,9 @@ public class CampaignController {
 	{
 		eventListView.setItems(screenController.masterController.eventList);
 		playersChoiceBox.setItems(screenController.masterController.playerList);
+		Player GM = new Player("GM", "GM");
+		screenController.masterController.playerList.add(GM);
+		playersChoiceBox.setValue(GM);
 	}
 	
 	@FXML
