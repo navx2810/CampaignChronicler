@@ -149,5 +149,11 @@
 	-fx-text-fill: rgb(225,255,255);
 }
 
+.list-cell:selected
+{
+	-fx-background-color: derive( rgb(25,25,25), 50% );
+	-fx-text-fill: rgb(225,225,225);
+}
+
 
 
