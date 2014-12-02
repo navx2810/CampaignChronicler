@@ -72,7 +72,7 @@
                               <ListView fx:id="itemListView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
                            </center>
                            <bottom>
-                              <Button maxHeight="100.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" styleClass="button-Red" text="Remove Item" BorderPane.alignment="CENTER" />
+                              <Button maxHeight="100.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#removeItem" prefHeight="50.0" styleClass="button-Red" text="Remove Item" BorderPane.alignment="CENTER" />
                            </bottom>
                         </BorderPane>
                         <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
@@ -80,7 +80,7 @@
                               <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
                            </GridPane.margin>
                            <bottom>
-                              <Button maxHeight="100.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" styleClass="button-Green" text="Add Item To Player" BorderPane.alignment="CENTER" />
+                              <Button maxHeight="100.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#addItemToPlayer" prefHeight="50.0" styleClass="button-Green" text="Add Item To Player" BorderPane.alignment="CENTER" />
                            </bottom>
                            <center>
                               <ListView fx:id="playerListViewForAdd" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
@@ -114,7 +114,7 @@
                               <ListView fx:id="playerItemListView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
                            </center>
                            <bottom>
-                              <Button maxHeight="100.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" styleClass="button-Red" text="Delete" BorderPane.alignment="CENTER" />
+                              <Button maxHeight="100.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#removeItemFromPlayer" prefHeight="50.0" styleClass="button-Red" text="Delete" BorderPane.alignment="CENTER" />
                            </bottom>
                         </BorderPane>
                      </children>
