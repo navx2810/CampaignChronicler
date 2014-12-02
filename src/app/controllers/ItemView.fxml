@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="dark-gray-bg" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.CampaignController">
+   <top>
+      <GridPane styleClass="grey-bg" BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#load" styleClass="button-Blue" text="Return" textFill="WHITE" />
+               </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </GridPane>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </GridPane>
+   </top>
+   <center>
+      <TabPane side="BOTTOM" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Add Item">
+               <content>
+                  <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(255, 255, 255, .2);">
+                           <center>
+                              <TextField alignment="CENTER" promptText="Item Name" BorderPane.alignment="CENTER" />
+                           </center>
+                           <bottom>
+                              <Button maxHeight="100.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" styleClass="button-Green" text="Add Item" BorderPane.alignment="CENTER" />
+                           </bottom>
+                           <GridPane.margin>
+                              <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                           </GridPane.margin>
+                        </BorderPane>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                           </GridPane.margin>
+                           <center>
+                              <ListView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                           </center>
+                           <bottom>
+                              <Button maxHeight="100.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" styleClass="button-Red" text="Remove Item" BorderPane.alignment="CENTER" />
+                           </bottom>
+                        </BorderPane>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                           </GridPane.margin>
+                           <bottom>
+                              <Button maxHeight="100.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" styleClass="button-Green" text="Add Item To Player" BorderPane.alignment="CENTER" />
+                           </bottom>
+                           <center>
+                              <ListView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                           </center>
+                        </BorderPane>
+                     </children>
+                  </GridPane>
+               </content>
+            </Tab>
+            <Tab text="Remove Item From Player">
+               <content>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ListView prefHeight="200.0" prefWidth="200.0">
+                           <GridPane.margin>
+                              <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                           </GridPane.margin>
+                        </ListView>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                           </GridPane.margin>
+                           <center>
+                              <ListView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                           </center>
+                           <bottom>
+                              <Button maxHeight="100.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" styleClass="button-Red" text="Delete" BorderPane.alignment="CENTER" />
+                           </bottom>
+                        </BorderPane>
+                     </children>
+                  </GridPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
