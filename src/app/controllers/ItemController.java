@@ -40,7 +40,10 @@ public class ItemController extends AbstractViewController {
 	private void addItem()
 	{
 		if ( !itemName.getText().isEmpty() )
+		{
 			screenController.masterController.add(new Item( itemName.getText() ));
+			itemName.clear();
+		}
 	}
 	
 	@FXML
@@ -71,6 +74,8 @@ public class ItemController extends AbstractViewController {
 		if ( selectedItem != null || selectedPlayer != null )
 			if ( selectedPlayer.getBackpack().containsKey(selectedItem) )
 				selectedPlayer.getBackpack().remove(selectedItem);
+		
+		updatePlayersItems();
 	}
 	
 	@FXML
