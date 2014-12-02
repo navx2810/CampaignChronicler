@@ -44,9 +44,7 @@ public class MasterController {
 	
 	public void removePlayerFromCampaign(Player player)
 	{
-		// Cycle through events and see if the player exists through this events
-			// if so, remove the event
-		// finally, remove the player from the player list
+		playerList.remove(player);
 	}
 	
 	public void add(Item item) { itemList.add(item); }
