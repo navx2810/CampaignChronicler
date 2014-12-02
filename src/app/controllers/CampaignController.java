@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import app.MasterController;
+import app.ScreenController;
 import entities.Event;
 import entities.Player;
 
@@ -17,21 +17,21 @@ public class CampaignController {
 	@FXML
 	private ListView<Event> eventListView;
 	
-	private MasterController masterController;
+	private ScreenController screenController;
 	
 	public CampaignController() 
 	{
 		
 	}
 	
-	public void setMasterController(MasterController masterController) {
-		this.masterController = masterController;
+	public void setScreenController(ScreenController screenController) {
+		this.screenController = screenController;
 	}
 	
 	public void addEntry()
 	{ 
 		if ( !eventText.getText().isEmpty() )
-			masterController.eventList.add( new Event( eventText.getText(), playersChoiceBox.getValue() ) ); 
+			screenController.masterController.eventList.add( new Event( eventText.getText(), playersChoiceBox.getValue() ) ); 
 		eventText.clear();
 	}
 
@@ -44,18 +44,18 @@ public class CampaignController {
 	@FXML
 	private void save() 
 	{
-		masterController.save();
+		screenController.masterController.save();
 	}
 	
 	public void init()
 	{
-		eventListView.setItems(masterController.eventList);
-		playersChoiceBox.setItems(masterController.playerList);
+		eventListView.setItems(screenController.masterController.eventList);
+		playersChoiceBox.setItems(screenController.masterController.playerList);
 	}
 	
 	@FXML
 	private void load() 
 	{
-		masterController.load();
+		screenController.masterController.load();
 	}
 }
