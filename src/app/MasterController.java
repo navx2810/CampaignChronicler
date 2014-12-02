@@ -1,5 +1,7 @@
 package app;
 
+import java.util.Iterator;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.layout.GridPane;
@@ -25,6 +27,31 @@ public class MasterController {
 		
 		campaignModel = new CampaignModel();
 	}
+	
+	
+	public void removeItemFromCampaign(Item item)
+	{
+		Iterator<Player> it = playerList.iterator();
+		while ( it.hasNext() )
+		{
+			Player player = it.next();
+			if ( player.getBackpack().containsKey(item) )
+				player.getBackpack().remove(item);
+		}
+		
+		itemList.remove(item);
+	}
+	
+	public void removePlayerFromCampaign(Player player)
+	{
+		// Cycle through events and see if the player exists through this events
+			// if so, remove the event
+		// finally, remove the player from the player list
+	}
+	
+	public void add(Item item) { itemList.add(item); }
+	public void add(Player player) { playerList.add(player); }
+	public void add(Event event) { eventList.add(event); }
 	
 	public void init(GridPane pane)
 	{
