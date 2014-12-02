@@ -166,5 +166,29 @@
 	-fx-text-fill: rgb(225,225,225);
 }
 
+.tab-pane .tab
+{
+	-fx-background-color: derive( rgb(25,25,25), 20% );
+	-fx-background-radius: 0;
+}
 
+.tab-pane .tab .tab-label
+{
+	-fx-text-fill: derive( rgb(25,25,25), 2% );
+}
 
+.tab-pane .tab:selected
+{
+	-fx-background-color: derive( rgb(25,25,25), 30% );
+	-fx-background-radius: 0;
+}
+
+.tab-pane .tab:selected .tab-label
+{
+	-fx-text-fill: white;
+}
+
+.tab-pane .tab-header-area .tab-header-background
+{
+	-fx-background-color: derive( rgb(25,25,25), 10% );
+}
