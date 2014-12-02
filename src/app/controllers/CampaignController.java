@@ -1,19 +1,14 @@
 package app.controllers;
 
-import utils.FileHelper;
-import models.CampaignModel;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import abstracts.AbstractViewController;
+import app.MasterController;
 import entities.Event;
-import entities.Item;
 import entities.Player;
 
-public class CampaignSaverController extends AbstractViewController {
+public class CampaignController {
 	
 	@FXML
 	private ChoiceBox<Player> playersChoiceBox;
@@ -22,27 +17,21 @@ public class CampaignSaverController extends AbstractViewController {
 	@FXML
 	private ListView<Event> eventListView;
 	
-	private CampaignModel campaignModel;
+	private MasterController masterController;
 	
-	private ObservableList<Player> playerList;
-	private ObservableList<Event> eventList;
-	private ObservableList<Item> itemList;
-	
-	public CampaignSaverController() 
+	public CampaignController() 
 	{
-		playerList = FXCollections.observableArrayList();
-		eventList = FXCollections.observableArrayList();
-		itemList = FXCollections.observableArrayList();
 		
-		campaignModel = new CampaignModel();
 	}
 	
-	public void addPlayer() {}
-	public void addItem() {}
+	public void setMasterController(MasterController masterController) {
+		this.masterController = masterController;
+	}
+	
 	public void addEntry()
 	{ 
 		if ( !eventText.getText().isEmpty() )
-			eventList.add( new Event( eventText.getText(), playersChoiceBox.getValue() ) ); 
+			masterController.eventList.add( new Event( eventText.getText(), playersChoiceBox.getValue() ) ); 
 		eventText.clear();
 	}
 
@@ -55,43 +44,18 @@ public class CampaignSaverController extends AbstractViewController {
 	@FXML
 	private void save() 
 	{
-		if ( FileHelper.saveCampaign(campaignModel) )
-			System.out.println("Save Complete");
-		else
-			System.out.println("Save Failed");
+		masterController.save();
 	}
-	@FXML
-	private void initialize()
+	
+	public void init()
 	{
-		loadLists();
-		
-		eventListView.setItems(eventList);
-		playersChoiceBox.setItems(playerList);
+		eventListView.setItems(masterController.eventList);
+		playersChoiceBox.setItems(masterController.playerList);
 	}
 	
 	@FXML
 	private void load() 
 	{
-		CampaignModel temp = FileHelper.loadCampaign();
-		if ( temp != null )
-		{
-			campaignModel = temp;
-			loadLists();
-		}
+		masterController.load();
 	}
-	
-	private void loadLists() 
-	{
-		playerList.clear();
-		eventList.clear();
-		itemList.clear();
-		
-		playerList.addAll(campaignModel.getPlayerModel().getArrayList());
-		eventList.addAll(campaignModel.getEventLogModel().getArrayList());
-		itemList.addAll(campaignModel.getItemModel().getArrayList());
-		
-		playerList.add(new Player("TemporaryGreg", "Greg"));
-	}
-
-
 }
