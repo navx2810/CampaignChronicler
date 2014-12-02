@@ -24,7 +24,10 @@ public final class FileHelper
 		{
 			try
 			{
-				FileOutputStream fileOut = new FileOutputStream(chooser.getSelectedFile() + "." + FILE_EXTENSION);
+				String file_name = chooser.getSelectedFile().toString();
+				if ( !file_name.endsWith( "." + FILE_EXTENSION ) )
+					file_name += "." + FILE_EXTENSION;
+				FileOutputStream fileOut = new FileOutputStream(file_name);
 				ObjectOutputStream out = new ObjectOutputStream(fileOut);
 				
 				out.writeObject(model);
