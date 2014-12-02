@@ -45,11 +45,11 @@ public final class FileHelper
 		JFileChooser chooser = new JFileChooser();
 		chooser.setFileFilter(new FileNameExtensionFilter("Campaign Data File (.cdm)", FILE_EXTENSION));
 		
-		if ( chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION )
+		if ( chooser.showDialog(null, "Open") == JFileChooser.APPROVE_OPTION )
 		{
 			try
 			{
-				CampaignModel model = null;
+				CampaignModel model;
 				FileInputStream inputStream = new FileInputStream(chooser.getSelectedFile());
 				ObjectInputStream in = new ObjectInputStream(inputStream);
 				
