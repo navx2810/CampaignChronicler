@@ -2,7 +2,7 @@ package app;
 	
 import java.io.IOException;
 
-import app.controllers.CampaignSaverController;
+import app.controllers.CampaignController;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -15,10 +15,13 @@ public class Main extends Application {
 	
 	public GridPane rootPane;
 	private BorderPane campaignPane;
+	private MasterController masterController;
 	
 	@Override
 	public void start(Stage primaryStage) throws IOException 
 	{
+		masterController = new MasterController();
+		
 		loadPanes();
 		
 		Scene scene = new Scene(rootPane);
@@ -33,12 +36,7 @@ public class Main extends Application {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("views/RootPaneView.fxml"));
 		rootPane = (GridPane) loader.load();
 		
-		loader = new FXMLLoader(getClass().getResource("controllers/CampaignSaverView.fxml"));
-		campaignPane = (BorderPane) loader.load();
-		CampaignSaverController saverController = loader.getController();
-		saverController.setRootPane(rootPane);
-		
-		rootPane.getChildren().add(campaignPane);
+		masterController.init(rootPane);
 	}
 	
 	public static void main(String[] args) {
